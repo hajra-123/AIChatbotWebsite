@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Support Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Floating Chat Button -->
+    <div id="chat-toggle" onclick="toggleChat()">💬 Chat with us</div>
+
+    <!-- Chat Window -->
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <h2>Live Support</h2>
+            <p>Essentialindia Greenedge Analytics Pvt Ltd</p>
+        </div>
+   <!-- Intro section -->
+    <div class="chat-intro">
+        <p>
+        <strong>💡 How can we assist you?</strong>
+        </p>
+    </div>
+        <div id="chat-box" class="chat-box"></div>
+
+       <div class="quick-options">
+    <button onclick="goToService('/services#green-building')">Green Building</button>
+    <button onclick="goToService('/services#building-simulation')">Building Simulation</button>
+    <button onclick="goToService('/services#gis')">GIS</button>
+    <button onclick="goToService('/services#quantity-estimation')">Quantity Estimation</button>
+</div>
+
+        <div class="chat-input">
+    <input type="text" id="message" placeholder="Type your message...">
+    <button onclick="sendMessage()" class="send-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+</svg></button>
+</div>
+
+        <div class="chat-footer">
+            <p>📞 Call us today: +91 9004620603 | 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007bff" viewBox="0 0 16 16">
+    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z"/>
+    <path d="M0 6.383l7.555 4.533a.5.5 0 0 0 .89 0L16 6.383V12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6.383z"/>
+  </svg> admin@theessentialindia.com
+            <p class="branding">Powered by Essentialindia</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
